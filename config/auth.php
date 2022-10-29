@@ -14,8 +14,8 @@ return [
      */
     'user' => [
         'model' => \Edwinhuish\ThinkAuth\Models\User::class,
-        'table' => 'users',
-        'froeign_key' => 'user_id',
+        'table' => 'user',
+        'foreign_key' => 'user_id',
     ],
 
     /*
@@ -23,7 +23,7 @@ return [
     */
     'role' => [
         'model' => \Edwinhuish\ThinkAuth\Models\Role::class,
-        'table' => 'auth_roles',
+        'table' => 'role',
         'foreign_key' => 'role_id',
     ],
 
@@ -32,7 +32,7 @@ return [
      */
     'permission' => [
         'model' => \Edwinhuish\ThinkAuth\Models\Permission::class,
-        'table' => 'auth_permissions',
+        'table' => 'permission',
         'foreign_key' => 'permission_id',
     ],
 
@@ -40,8 +40,8 @@ return [
      * 中间表
      */
     'pivot' => [
-        'role_permission_access' => 'auth_role_permission_access',
-        'user_role_access' => 'auth_user_role_access',
+        'role_permission_access' => 'rel_role_permission',
+        'user_role_access' => 'rel_user_role',
     ],
 
     /*

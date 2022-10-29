@@ -197,8 +197,8 @@ trait RoleTrait
         return $this->belongsToMany(
             config('auth.permission.model'),
             config('auth.pivot.role_permission_access'),
-            config('auth.permission.froeign_key'),
-            config('auth.role.froeign_key')
+            config('auth.permission.foreign_key'),
+            config('auth.role.foreign_key')
         );
     }
 
@@ -210,8 +210,8 @@ trait RoleTrait
         return $this->belongsToMany(
             config('auth.user.model'),
             config('auth.pivot.user_role_access'),
-            config('auth.user.froeign_key'),
-            config('auth.role.froeign_key')
+            config('auth.user.foreign_key'),
+            config('auth.role.foreign_key')
         );
     }
 }

@@ -68,8 +68,8 @@ trait PermissionTrait
         return $this->belongsToMany(
             config('auth.role.model'),
             config('auth.pivot.role_permission_access'),
-            config('auth.role.froeign_key'),
-            config('auth.permission.froeign_key')
+            config('auth.role.foreign_key'),
+            config('auth.permission.foreign_key')
         );
     }
 }

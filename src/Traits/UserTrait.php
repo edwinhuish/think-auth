@@ -203,8 +203,8 @@ trait UserTrait
         return $this->belongsToMany(
             config('auth.role.model'),
             config('auth.pivot.user_role_access'),
-            config('auth.role.froeign_key'),
-            config('auth.user.froeign_key')
+            config('auth.role.foreign_key'),
+            config('auth.user.foreign_key')
         );
     }
 
