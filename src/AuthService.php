@@ -14,7 +14,7 @@ use Edwinhuish\ThinkAuth\Middlewares\PermissionMiddleware;
 use Edwinhuish\ThinkAuth\Middlewares\RoleMiddleware;
 use think\Service;
 
-class PermissionService extends Service
+class AuthService extends Service
 {
     public function boot()
     {
