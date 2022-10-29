@@ -170,9 +170,13 @@ trait UserTrait
      */
     public function hasRole(string $role): bool
     {
-        $role = collect($this->roles)->where('name', $role)->first();
+        foreach ($this->roles->toArray() as $row) {
+            if ($row['name'] == $role) {
+                return true;
+            }
+        }
 
-        return ! empty($role);
+        return false;
     }
 
     /**
